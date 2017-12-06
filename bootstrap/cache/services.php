@@ -27,10 +27,12 @@
     23 => 'Laravel\\Tinker\\TinkerServiceProvider',
     24 => 'JeroenNoten\\LaravelAdminLte\\ServiceProvider',
     25 => 'Intervention\\Image\\ImageServiceProvider',
-    26 => 'App\\Providers\\AppServiceProvider',
-    27 => 'App\\Providers\\AuthServiceProvider',
-    28 => 'App\\Providers\\EventServiceProvider',
-    29 => 'App\\Providers\\RouteServiceProvider',
+    26 => 'Yajra\\DataTables\\DataTablesServiceProvider',
+    27 => 'Yajra\\DataTables\\DataTablesServiceProvider',
+    28 => 'App\\Providers\\AppServiceProvider',
+    29 => 'App\\Providers\\AuthServiceProvider',
+    30 => 'App\\Providers\\EventServiceProvider',
+    31 => 'App\\Providers\\RouteServiceProvider',
   ),
   'eager' => 
   array (
@@ -47,10 +49,12 @@
     10 => 'Fideloper\\Proxy\\TrustedProxyServiceProvider',
     11 => 'JeroenNoten\\LaravelAdminLte\\ServiceProvider',
     12 => 'Intervention\\Image\\ImageServiceProvider',
-    13 => 'App\\Providers\\AppServiceProvider',
-    14 => 'App\\Providers\\AuthServiceProvider',
-    15 => 'App\\Providers\\EventServiceProvider',
-    16 => 'App\\Providers\\RouteServiceProvider',
+    13 => 'Yajra\\DataTables\\DataTablesServiceProvider',
+    14 => 'Yajra\\DataTables\\DataTablesServiceProvider',
+    15 => 'App\\Providers\\AppServiceProvider',
+    16 => 'App\\Providers\\AuthServiceProvider',
+    17 => 'App\\Providers\\EventServiceProvider',
+    18 => 'App\\Providers\\RouteServiceProvider',
   ),
   'deferred' => 
   array (

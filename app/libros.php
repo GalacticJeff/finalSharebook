@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class libros extends Model
 {
     //
-    protected $table = 'generos';
+    protected $table = 'libros';
+   
 }

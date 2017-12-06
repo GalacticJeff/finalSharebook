@@ -15,7 +15,7 @@ class CreateLibrosTable extends Migration
     {
         Schema::create('libros', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('titulo');
+            $table->string('titulo')->unique();
             $table->string('descripcion');
             $table->string('autor');
             $table->integer('year');
@@ -25,11 +25,11 @@ class CreateLibrosTable extends Migration
         Schema::create('biblioteca', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('usuario');
-            $table->integer('libro');
+            $table->string('libro');
             $table->timestamps();
 
             $table->foreign('usuario')->references('id')->on('users');
-            $table->foreign('libro')->references('id')->on('libros');
+            $table->foreign('libro')->references('titulo')->on('libros');
         
         });
 
