@@ -19,6 +19,7 @@ class CreateLibrosTable extends Migration
             $table->string('descripcion');
             $table->string('autor');
             $table->integer('year');
+            $table->string('portada')->null();
             $table->timestamps();
         });
 

@@ -19,6 +19,7 @@ Auth::routes();
 
 Route::get('profile', 'UserController@profile');
 Route::post('profile', 'UserController@update_avatar');
+Route::post('profilen', 'UserController@Store');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -31,3 +32,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('app/biblioteca', 'BibliotecaController');
+Route::resource('app/buscar_libros', 'BuscarLibrosController');

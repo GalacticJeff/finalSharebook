@@ -4,45 +4,20 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
-use App\Http\Requests;
-use Auth;
-use Image;
+use Illuminate\Support\Facades\DB;
 
-class UserController extends Controller
+
+class BuscarLibrosController extends Controller
 {
-
-    public function profile(){
-
-    	return view('Usuarios/perfil', array('user' => Auth::user()) );
-    }
-
-    public function update_avatar(Request $request){
-        
-                // Handle the user upload of avatar
-                if($request->hasFile('avatar')){
-                    $avatar = $request->file('avatar');
-                    $filename = time() . '.' . $avatar->getClientOriginalExtension();
-                    Image::make($avatar)->resize(300, 300)->save( public_path('/uploads/avatars/' . $filename ) );
-        
-                    $user = Auth::user();
-                    $user->avatar = $filename;
-                    $user->save();
-                }
-        
-                return view('Usuarios/perfil', array('user' => Auth::user()) );
-        
-            }
-        
-
     /**
-     * 
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    public function index(){
         //
+        $contacto = User::all();
+        return view('app/buscar_libros',compact('contacto'));
     }
 
     /**
@@ -61,18 +36,17 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request){
         //
-        $contactos = User::find(Auth::user()->id);
-
-        $contactos->numero_contacto = $request['numero_contacto'];
-        $contactos->facebook = $request['facebook'];
-        $contactos->instagram = $request['instagram'];
-        $contactos->save();
-
-        return redirect('profile')->with('libro actualizado satisfactoriamente.');
-        
+        if(isset($request['titulo'])){
+            $contacto = DB::table('biblioteca')
+                ->join('users','users.id','=','biblioteca.usuario')
+                ->join('libros','libros.titulo','=','biblioteca.libro')
+                ->where('biblioteca.libro',$request['titulo'])
+                ->get();
+        }
+        //dd($contacto);
+        return view('app/buscar_libros',compact('contacto'));
     }
 
     /**

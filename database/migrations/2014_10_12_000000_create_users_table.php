@@ -21,10 +21,15 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('avatar')->default('default.jpg');
             $table->string('password');
+            $table->integer('numero_contacto')->nullable();
+            $table->string('facebook')->nullable();
+            $table->string('instagram')->nullable();
             //$table->integer('ciudad');
             $table->rememberToken();
             $table->timestamps();
         });
+
+
         
     }
 

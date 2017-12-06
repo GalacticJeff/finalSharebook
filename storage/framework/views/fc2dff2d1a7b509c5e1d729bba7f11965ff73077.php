@@ -19,7 +19,7 @@
 
 <div align="left" class="container">
     <a href="/profile">
-        <img align="left" src="/uploads/avatars/<?php echo e(Auth::user()->avatar); ?>" style="width:150px; height:150px; float:left; border-radius:1%; margin-right:25px;">
+        <img align="left" src="/uploads/avatars/<?php echo e(Auth::user()->avatar); ?>" style="width:150px; height:150px; float:left; border-radius:50%; margin-right:25px;">
     </a>  
     <h1><?php echo e(Auth::user()->name); ?> <small><?php echo e(Auth::user()->email); ?></small></h1>
     <!-- Trigger the modal with a button -->
