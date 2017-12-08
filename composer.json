@@ -6,9 +6,11 @@
     "type": "project",
     "require": {
         "php": ">=7.0.0",
+        "facebook/webdriver": "^1.5",
         "fideloper/proxy": "~3.3",
         "intervention/image": "^2.4",
         "jeroennoten/laravel-adminlte": "^1.22",
+        "laravel/browser-kit-testing": "1.*",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0",
         "yajra/laravel-datatables-oracle": "~8.0"
@@ -16,6 +18,7 @@
     "require-dev": {
         "filp/whoops": "~2.0",
         "fzaninotto/faker": "~1.4",
+        "laravel/dusk": "^2.0",
         "mockery/mockery": "~1.0",
         "phpunit/phpunit": "~6.0"
     },

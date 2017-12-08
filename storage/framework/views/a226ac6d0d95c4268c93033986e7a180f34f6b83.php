@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title><?php echo $__env->yieldContent('title_prefix', config('adminlte.title_prefix', '')); ?>
-<?php echo $__env->yieldContent('title', config('adminlte.title', 'AdminLTE 2')); ?>
+<?php echo $__env->yieldContent('title', config('adminlte.title', 'Sharebook')); ?>
 <?php echo $__env->yieldContent('title_postfix', config('adminlte.title_postfix', '')); ?></title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
